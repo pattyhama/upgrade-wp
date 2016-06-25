@@ -25,7 +25,6 @@ cp wp-mail.php ~/.Trash/ && rm -f wp-mail.php && cp ~/Downloads/wordpress/wp-mai
 cp wp-settings.php ~/.Trash/ && rm -f wp-settings.php && cp ~/Downloads/wordpress/wp-settings.php .
 cp wp-signup.php ~/.Trash/ && rm -f wp-signup.php && cp ~/Downloads/wordpress/wp-signup.php .
 cp wp-trackback.php ~/.Trash/ && rm -f wp-wp-trackback.php && cp ~/Downloads/wordpress/wp-trackback.php .
-# see the modification
 echo "
 "
 # show git modification
