@@ -1,8 +1,9 @@
 #!/bin/sh
 # @(#) This script is for upgrading wordpress.
 
-echo upgrade start!
+echo "upgrade start!"
 # move to wordpress-project-folder
+# "work" is alias to working directory
 work && cd wordpress_gae/wordpress
 # replace the target files
 cp -R wp-admin ~/.Trash/ && rm -rf wp-admin/ && cp -R ~/Downloads/wordpress/wp-admin .
@@ -31,6 +32,17 @@ echo "
 git status
 echo "
 "
-echo upgrade complete!
-# move back to default working directory
-work
+echo -n "Enter \"OK\", if the result is fine, otherwise something else then this script will stop :"
+read RESULT
+if [ $RESULT = OK ]; then
+  git add .
+  echo -n "Enter commit message for git, e.g. upgrade to ver.x.x.x : "
+  read MESSAGE
+  git commit -m "$MESSAGE"
+  git push origin master
+  echo "upgrade complete!"
+else
+  echo "Stopping script as the message was not entered as \"OK\"."
+  echo "
+  "
+fi
