@@ -35,7 +35,7 @@ echo "
 echo -n "Enter \"OK\", if the result is fine, otherwise something else then this script will stop :"
 read RESULT
 if [ $RESULT = OK ]; then
-  #update git
+  # update git
   git add .
   echo -n "Enter commit message for git, e.g. upgrade to ver.x.x.x : "
   read MESSAGE
