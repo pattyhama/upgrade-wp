@@ -39,8 +39,9 @@ if [ $RESULT = OK ]; then
   echo -n "Enter commit message for git, e.g. upgrade to ver.x.x.x : "
   read MESSAGE
   git commit -m "$MESSAGE"
-  git push origin master
-  echo "upgrade complete!"
+  git push origin master && \
+  appcfg.py update ~/Workspace/wordpress_gae/ && \
+  echo "upgrade successfully completed!"
 else
   echo "Stopping script as the message was not entered as \"OK\"."
   echo "
