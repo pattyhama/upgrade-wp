@@ -35,11 +35,13 @@ echo "
 echo -n "Enter \"OK\", if the result is fine, otherwise something else then this script will stop :"
 read RESULT
 if [ $RESULT = OK ]; then
+  #update git
   git add .
   echo -n "Enter commit message for git, e.g. upgrade to ver.x.x.x : "
   read MESSAGE
   git commit -m "$MESSAGE"
   git push origin master && \
+  # update gae
   appcfg.py update ~/Workspace/wordpress_gae/ && \
   echo "upgrade successfully completed!"
 else

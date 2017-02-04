@@ -9,3 +9,6 @@ This script is for upgrading wordpress.
 
 ## How to run
 ```$ source upgrade-wp.sh```  
+
+## Note
+1. This script contains update script of "Git" and "GAE." These need to be omitted depending on your environment.
