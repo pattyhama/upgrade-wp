@@ -1,6 +1,6 @@
 # upgrade-wp
+[![Build Status](https://travis-ci.org/pattyhama/upgrade-wp.svg?branch=master)](https://travis-ci.org/pattyhama/upgrade-wp)
 This script is for upgrading wordpress.  
-https://travis-ci.org/pattyhama/upgrade-wp.svg?branch=master
 
 ## Requirement
 1. System: MacOS X  
