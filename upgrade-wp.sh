@@ -2,6 +2,8 @@
 # @(#) This script is for upgrading wordpress.
 
 echo "upgrade start!"
+# log in to git
+source ./ssh-git.sh
 # move to wordpress-project-folder
 # "work" is alias to working directory
 work && cd wordpress_gae/wordpress
